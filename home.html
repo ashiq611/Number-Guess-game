@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- 1st palyer design --> 
+
+        <div id="guess-div" class="w-1/3 bg-blue-800 p-6 rounded-lg shadow-md">
+          <h1 class="text-2xl text-white font-semibold mb-4">Guess the Number Game</h1>
+          <p class="mb-4 text-white">Give any number 1-10</p>
+          <input type="number" id="guess" class="mt-2 p-2 border rounded-lg" placeholder="Enter your guess" min="1" max="100" required>
+          <button id="submitBtn" class="mt-4 bg-indigo-200 text-black p-2 rounded-lg hover:bg-red-600 hover:text-white">Submit Guess</button>
+          <p id="message" class="mt-4 text-red-600"></p>
+        </div>
+
+<!-- opponent part design -->
+
+        <div id="opponent-div" class="w-1/3 bg-purple-700 p-6 rounded-lg shadow-md hidden">
+            <h1 class="text-2xl font-semibold mb-4">Guess the Number Game</h1>
+            <h3 id="at" class="text-white text-bold mb-4"></h3>
+            <p class="mb-4">Try to guess the secret number between 1 and 10.</p>
+            <input type="number" id="opponent-guess" class="mt-2 p-2 border rounded-lg" placeholder="Enter your guess" min="1" max="100" required>
+            <button id="opponent-submitBtn" class="mt-4 bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Submit Guess</button>
+            <p id="dmessage" class="mt-4 text-white"></p>
+          </div>
+
+<!-- winner part design -->
+
+          <div id="winner" class="w-1/3 bg-green-300 p-6 rounded-lg shadow-md hidden">
+            <h2 class="text-2xl font-semibold mb-4">Congratulations!</h2>
+            <p class="text-lg mb-4">You are the winner of the game!</p>
+            <img src="./Hands - Medal.png" alt="Winner Trophy" class="mx-auto mb-4">
+            <p class="text-gray-600">Keep up the good work!</p>
+        </div>
+
+<!-- loss part desig  --> 
+
+        <div id="loss" class="w-1/3 bg-green-300 p-6 rounded-lg shadow-md hidden">
+            <h2 class="text-2xl font-semibold mb-4">So Sad!!</h2>
+            <p class="text-lg mb-4">You are Loss!</p>
+            <img src="./Avatars - Default.png" alt="Loss Trophy" class="mx-auto mb-4">
+            <p class="text-gray-600">Better Luck Next Time!</p>
+        </div>
+
+
+
+
+    <script src="./js/home.js"></script>
+</body>
+</html>
